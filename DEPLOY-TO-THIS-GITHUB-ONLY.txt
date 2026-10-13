@@ -1,21 +1,20 @@
-Samara Website v2.6.4 (samaraassistedliving.com) — Google search fix — upload ONLY to GitHub repo: Samara_Website
+Samara Website v2.6.6 (samaraassistedliving.com) — Call / WhatsApp bar for phones — upload ONLY to GitHub repo: Samara_Website
 
-Why: Google was showing the Family Portal and the ERP login page for "samara assisted living"
-instead of this website. This update (together with the Family Portal and ERP updates) fixes that.
+Why: Google Ads visitors (mostly on phones) land on the home page, which had no Samara call
+button (the only call link was the AppGeo developer number) and the Samara AI greeting covered
+the top of the page. In the first week of ads: 53 clicks, 0 calls / WhatsApp.
 
 What changed:
- - Home page title & description now say Chennai / Mogappair / 24x7 nursing (better for Google).
- - "Family Portal" and "Staff Login" links are marked rel="nofollow" (private login pages).
- - sitemap.xml: home page date updated to 2026-10-10.
- - Contact page: phone 073959 61616 is now a tap-to-call link (before, the only call link on
-   the site was the AppGeo developer number).
- - Home page business details for Google (schema): now LocalBusiness, phone +91-7395961616,
-   address spelled exactly as on the contact page / Google Business Profile, map link added.
-   This helps Google accept the website link on the Business Profile.
- - Footer version on all pages: Public Website v2.6.4.
+ - New: on phones, a bar fixed at the bottom of every page with two big buttons:
+   "Call Now" (99767 35577) and "WhatsApp" (73959 61616, with a ready-typed hello message).
+   Follows the English / Tamil switch. Taps are counted in Google Ads (v2.6.5 tracking).
+ - On phones the round WhatsApp button is hidden (the bar replaces it); Find Us and Samara AI
+   buttons sit above the bar.
+ - On phones the Samara AI greeting now appears after 20 seconds instead of at once. Desktop unchanged.
+ - Footer version on all pages: Public Website v2.6.6.
 
 Upload these files, keeping the same folders:
-   index.html, about.html, careers.html, contact.html, disclaimer.html, enquiry.html, faq.html,
-   feedback.html, gallery.html, packages.html, privacy.html, rooms.html, services.html,
-   sitemap.xml, js/app.js, app.js
-Do NOT upload this note or the zip. No Supabase change needed.
+   js/samara-contact-bar.js (new), js/samara-ai.js, and all 17 .html pages
+   (404, about, careers, contact, disclaimer, enquiry, faq, feedback, gallery, index, packages,
+    privacy-policy, privacy, refund-cancellation, rooms, services, terms)
+No Supabase change needed.

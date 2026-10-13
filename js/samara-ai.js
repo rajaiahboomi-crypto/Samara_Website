@@ -429,7 +429,10 @@ function startTeaser(){
  var c=document.getElementById('sai-close');if(c)c.addEventListener('click',function(){setTimeout(showTeaser,250)});
  // Follow the site's English / Tamil switch.
  try{new MutationObserver(function(){if(teaserEl)showTeaser()}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}catch(e){}
- setTimeout(showTeaser,isMini()?0:1200);
+ // v2.6.6: on phones the big greeting covered the page for ad visitors — show it after 20 s there
+ // (the call / WhatsApp bar is visible first). Desktop unchanged.
+ var small=window.matchMedia&&window.matchMedia('(max-width:768px)').matches;
+ setTimeout(showTeaser,isMini()?0:(small?20000:1200));
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){ui();startTeaser()});else{ui();startTeaser()}
 })();
